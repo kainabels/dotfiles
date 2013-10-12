@@ -30,7 +30,6 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'ctrlp.vim'
 
 NeoBundle 'tpope/vim-rails'
-NeoBundle 'vim-ruby/vim-ruby'
 
 NeoBundle 'mattn/zencoding-vim'
 
