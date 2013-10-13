@@ -300,7 +300,7 @@ set clipboard=unnamed
 " file encoding
 set encoding=utf8
 set termencoding=utf8
-set fileencoding=utf8
+"set fileencoding=utf8
 "set fileencodings=ucs-bom,euc-jp,cp932,iso-2022-jp
 "set fileencodings+=,ucs-2le,ucs-2,utf-8
 "set paste
