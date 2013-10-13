@@ -267,6 +267,7 @@ set statusline=%n\:%y%F\ \|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}%m%r%=
 set laststatus=2
 
 " * key setting
+" C-@: 挿入モードから抜ける
 imap <C-@> <C-[>
 
 " * indent setting
