@@ -49,6 +49,7 @@ NeoBundle 'AndrewRadev/switch.vim'
 " zencoding
 NeoBundle 'mattn/zencoding-vim'
 
+NeoBundle 'itchyny/lightline.vim'
 " Installation check.
 NeoBundleCheck
 
@@ -250,6 +251,10 @@ source $VIMRUNTIME/macros/matchit.vim
 " switch.vim
 nnoremap + :call switch#Switch(g:variable_style_switch_definitions)<cr>
 nnoremap - :Switch<cr>
+
+let g:lightline = {
+      \ 'colorscheme': 'landscape',
+      \ }
 
 " * visual setting
 set number
