@@ -40,8 +40,13 @@ NeoBundle 'sudo.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'ctrlp.vim'
 
+" rails
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'basyura/unite-rails'
+NeoBundle 'alpaca-tc/vim-endwise.git'
+NeoBundle 'AndrewRadev/switch.vim'
 
+" zencoding
 NeoBundle 'mattn/zencoding-vim'
 
 " Installation check.
@@ -241,6 +246,10 @@ vmap <Leader>c <Plug>NERDCommenterToggle
 
 " matchit
 source $VIMRUNTIME/macros/matchit.vim
+
+" switch.vim
+nnoremap + :call switch#Switch(g:variable_style_switch_definitions)<cr>
+nnoremap - :Switch<cr>
 
 " * visual setting
 set number
