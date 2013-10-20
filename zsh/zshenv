@@ -1,5 +1,9 @@
+# PATH settings.
 typeset -U path
 PATH=/usr/local/bin:$PATH
 PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
 export PATH
+# PostgreSQL settings.
+PG_DATA=/usr/local/var/postgres
+export PG_DATA
 
