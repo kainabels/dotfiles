@@ -7,7 +7,7 @@ require 'pathname'
 pg_data_path = ''
 pg_server_log = ''
 
-namespace :postgres do
+namespace :pg do
 
 	desc "Check postgresql server."
 	task :check do
