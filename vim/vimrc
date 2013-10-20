@@ -79,6 +79,7 @@ syntax on
 set shortmess+=|
 set statusline=%n\:%y%F\ \|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}%m%r%=
 set laststatus=2
+set modeline
 
 " * key setting
 let mapleader = ","
