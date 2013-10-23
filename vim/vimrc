@@ -38,6 +38,8 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/vimfiler'
 
 NeoBundle 'tpope/vim-surround'
+
+NeoBundle 'kmnk/vim-unite-giti'
 NeoBundle 'tpope/vim-fugitive'
 
 NeoBundle 'The-NERD-Commenter'
@@ -50,6 +52,7 @@ NeoBundle 'ctrlp.vim'
 " rails
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'basyura/unite-rails'
+NeoBundle 'rhysd/unite-ruby-require.vim'
 NeoBundle 'alpaca-tc/vim-endwise.git'
 NeoBundle 'AndrewRadev/switch.vim'
 
@@ -60,6 +63,8 @@ NeoBundle 'itchyny/lightline.vim'
 
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
+NeoBundle 'osyo-manga/unite-quickfix'
+NeoBundle 'tsukkee/unite-tag'
 " textobj
 NeoBundle 'kana/vim-textobj-user'
 " textobj:function: af, if
@@ -396,6 +401,11 @@ nnoremap <silent> [unite]m :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 nnoremap <silent> [unite]s :<C-u>UniteResume search-buffer<CR>
 
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings() "{{{
+	nmap <buffer> <ESC> <Plug>(unite_exit)
+endfunction "}}}
+
 "" unite-grep {{{
 " unite-grepのバックエンドをagに切り替える
 " http://qiita.com/items/c8962f9325a5433dc50d
@@ -428,6 +438,9 @@ let g:lightline = {
       \ 'colorscheme': 'landscape',
       \ }
 
+
+" unite-ruby-require.vim
+let g:unite_source_ruby_require_cmd = '/Users/knsky/.rbenv/shims/ruby'
 " 入力モードの時にステータスラインの色を変える。
 " let g:hi_insert = 'highlight StatusLine guifg=LightGrey guibg=darkblue gui=none ctermfg=white ctermbg=blue cterm=none'
 
