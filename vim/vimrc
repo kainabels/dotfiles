@@ -67,6 +67,9 @@ NeoBundle 'osyo-manga/unite-quickfix'
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 't9md/vim-textmanip'
 
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'rhysd/clever-f.vim'
+
 " textobj
 NeoBundle 'kana/vim-textobj-user'
 " textobj:function: af, if
