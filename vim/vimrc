@@ -60,6 +60,38 @@ NeoBundle 'itchyny/lightline.vim'
 
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
+" textobj
+NeoBundle 'kana/vim-textobj-user'
+" textobj:function: af, if
+"NeoBundle 'kana/vim-textobj-function'
+" textobj:comment: ac, ic
+NeoBundle 'thinca/vim-textobj-comment'
+" textobj:space: aS, iS
+NeoBundle 'saihoooooooo/vim-textobj-space'
+" textobj:diff: adf, idf
+NeoBundle 'kana/vim-textobj-diff'
+" textobj:ruby: ar, ir
+NeoBundle 'rhysd/vim-textobj-ruby'
+" textobj:syntax: ay, iy
+NeoBundle 'kana/vim-textobj-syntax'
+" textobj:url: au, iu
+NeoBundle 'mattn/vim-textobj-url'
+" textobj:continous-line: av, iv
+NeoBundle 'rhysd/vim-textobj-continuous-line'
+" textobj: between: af, if
+NeoBundle 'thinca/vim-textobj-between'
+" textobj: motion: am, im
+NeoBundle 'hchbaw/textobj-motionmotion.vim'
+" textobj: multi-block: asb, isb
+NeoBundle "osyo-manga/vim-textobj-multiblock"
+" textobj: x(): axb, ixb
+NeoBundle 'anyakichi/vim-textobj-xbrackets'
+" textobj: 正規表現: aq, iq
+NeoBundle "deris/vim-textobj-enclosedsyntax"
+" textobj: 日時: ada, ida
+NeoBundle 'kana/vim-textobj-datetime'
+" textobj: 行: al, il
+NeoBundle 'kana/vim-textobj-line'
 " Installation check.
 NeoBundleCheck
 
