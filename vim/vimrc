@@ -119,7 +119,7 @@ set shortmess+=|
 set statusline=%n\:%y%F\ \|%{(&fenc!=''?&fenc:&enc).'\|'.&ff.'\|'}%m%r%=
 set laststatus=2
 set modeline
-
+set scrolloff=10
 " * key setting
 let mapleader = ","
 " ,のデフォルトの機能は、\で使えるように退避
