@@ -362,7 +362,7 @@ nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files buffer fi
 "nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]m :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-nnoremap <silent> [unite]r :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent> [unite]s :<C-u>UniteResume search-buffer<CR>
 
 "" unite-grep {{{
 " unite-grepのバックエンドをagに切り替える
