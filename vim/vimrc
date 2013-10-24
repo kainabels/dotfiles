@@ -151,6 +151,9 @@ nnoremap s <Nop>
 nnoremap t <Nop>
 " クリップボードからペースト
 vnoremap <silent> <C-p> "0p<CR>
+" paste-modeきりかえ
+nnoremap <silent> <F10> :call Paste_on_off()<CR>
+set pastetoggle=<F10>
 
 " * indent setting
 set ai
@@ -473,6 +476,26 @@ vmap <C-l> <Plug>(textmanip-move-right)
 
 " unite-ruby-require.vim
 let g:unite_source_ruby_require_cmd = '/Users/knsky/.rbenv/shims/ruby'
+"-------------------------------------------------
+" ユーザー定義関数
+"-------------------------------------------------
+ 
+" Paste Mode
+" {{{
+let paste_mode = 0 " 0 = normal, 1 = paste
+ 
+function! Paste_on_off()
+    if g:paste_mode == 0
+        set paste
+        let g:paste_mode = 1
+    else
+        set nopaste
+        let g:paste_mode = 0
+    endif
+    return
+endfunc
+" }}}
+
 " 入力モードの時にステータスラインの色を変える。
 " let g:hi_insert = 'highlight StatusLine guifg=LightGrey guibg=darkblue gui=none ctermfg=white ctermbg=blue cterm=none'
 
