@@ -101,6 +101,8 @@ NeoBundle 'vim-scripts/dbext.vim'
 NeoBundle 'rking/ag.vim'
 " 実行
 NeoBundle 'thinca/vim-quickrun'
+" コードチェック
+NeoBundle 'scrooloose/syntastic'
 " カラフルなステータスバー
 NeoBundle 'itchyny/lightline.vim'
 " sudo
@@ -590,6 +592,13 @@ vmap <Leader>c <Plug>NERDCommenterToggle
 
 " matchit
 source $VIMRUNTIME/macros/matchit.vim
+
+" syntastic settings {{{
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_quiet_warnings = 0
+" }}}
 
 " switch.vim {{{
 nnoremap + :call switch#Switch(g:variable_style_switch_definitions)<cr>
