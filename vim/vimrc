@@ -557,6 +557,7 @@ let g:lightline = {
 " }}}
 
 " textmanip.vim settings {{{
+let g:textmanip_enable_mappings = 0
 vmap <C-j> <Plug>(textmanip-move-down)
 vmap <C-k> <Plug>(textmanip-move-up)
 vmap <C-h> <Plug>(textmanip-move-left)
