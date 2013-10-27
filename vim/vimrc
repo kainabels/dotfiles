@@ -58,7 +58,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'honza/vim-snippets'
 " }}}
 
-NeoBundle 'tpope/vim-surround'
+"NeoBundle 'tpope/vim-surround'
 
 " 移動用 {{{
 " 任意の場所へジャンプ
