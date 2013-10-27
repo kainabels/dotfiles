@@ -112,8 +112,22 @@ NeoBundle 'thinca/vim-qfreplace'
 " ローカルの設定読み込み
 NeoBundle 'thinca/vim-localrc'
 
+" for WEB {{{
+
+" HTML5
+NeoBundle 'othree/html5.vim'
+" CSS3
+NeoBundle 'hail2u/vim-css3-syntax'
+" SCSS
+NeoBundle 'cakebaker/scss-syntax.vim'
 " next zencoding
 NeoBundle 'mattn/emmet-vim'
+" WEBカラー表示
+NeoBundle 'lilydjwg/colorizer'
+" ブラウザを開く
+NeoBundle 'tyru/open-browser.vim'
+
+" }}}
 
 " rails
 NeoBundle 'tpope/vim-rails'
