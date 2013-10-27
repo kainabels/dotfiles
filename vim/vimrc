@@ -51,6 +51,12 @@ NeoBundle 'basyura/unite-rails'
 NeoBundle 'rhysd/unite-ruby-require.vim'
 " unite source: QuickFix
 NeoBundle 'osyo-manga/unite-quickfix'
+" unite source: web-color
+NeoBundle 'pasela/unite-webcolorname'
+" unite source: help
+NeoBundle 'tsukkee/unite-help'
+" unite source: outline
+NeoBundle 'h1mesuke/unite-outline'
 " }}}
 
 " neosnippet {{{
