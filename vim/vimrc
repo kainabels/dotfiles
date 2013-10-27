@@ -190,6 +190,30 @@ NeoBundle 'RyanMcG/vim-textobj-dash'
 " textobj: アンダースコア: a_, i_
 NeoBundle 'kana/vim-textobj-underscore'
 " }}}
+
+" operator {{{
+NeoBundle 'kana/vim-operator-user'
+" operator: surround
+NeoBundle 'rhysd/vim-operator-surround'
+" operator: ag
+NeoBundle 'tek/vim-operator-ag'
+" operator: テーブル
+NeoBundle 'pekepeke/vim-operator-tabular'
+" Requires
+NeoBundle 'pekepeke/vim-csvutil'
+
+" operator: 置換
+NeoBundle 'kana/vim-operator-replace'
+" operator: コメント
+NeoBundle 'emonkak/vim-operator-comment'
+" operator: HTMLのエスケープ
+NeoBundle 'tyru/operator-html-escape.vim'
+" operator: snakecase <-> CamelCaseの変換
+NeoBundle 'tyru/operator-camelize.vim'
+
+" }}}
+
+
 " Installation check.
 NeoBundleCheck
 " }}}
@@ -585,6 +609,51 @@ vmap <C-k> <Plug>(textmanip-move-up)
 vmap <C-h> <Plug>(textmanip-move-left)
 vmap <C-l> <Plug>(textmanip-move-right)
 " }}}
+
+" operator settings {{{
+noremap [op] <Nop>
+map s [op]
+
+" operator:surround {{{
+map <silent>[op]sa <Plug>(operator-surround-append)
+map <silent>[op]sd <Plug>(operator-surround-delete)
+map <silent>[op]sr <Plug>(operator-surround-replace)
+" delete or replace most inner surround
+" if you use vim-textobj-multiblock
+nmap <silent>[op]sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
+nmap <silent>[op]srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
+
+" if you use vim-textobj-between
+nmap <silent>[op]sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
+nmap <silent>[op]srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
+" }}}
+
+" operator: replace
+map <silent>[op]r  <Plug>(operator-replace)
+
+" operator: ag
+map <silent>[op]g <Plug>(operator-ag)
+map <silent>[op]G <Plug>(operator-agg)
+
+" operator: HTMLエスケープ
+map <silent>[op]h  <Plug>(operator-html-escape)
+map <silent>[op]H  <Plug>(operator-html-unescape)
+
+" operator: snakecase <-> Camelcase
+map <silent>[op]c <Plug>(operator-camelize-toggle)
+
+" operator: コメント
+map <silent>[op]cu  <Plug>(operator-uncomment)
+map <silent>[op]cc  <Plug>(operator-comment)
+
+" operator: テーブル
+map <silent>[op]tt <Plug>(operator-tabular-tsv2md)
+map <silent>[op]tc <Plug>(operator-tabular-csv2md)
+map <silent>[op]tT <Plug>(operator-tabular-md2tsv)
+map <silent>[op]tC <Plug>(operator-tabular-md2csv)
+
+" }}}
+
 
 "-------------------------------------------------
 " ユーザー定義関数
