@@ -260,7 +260,8 @@ set writebackup
 set hidden
 " 
 set formatoptions=c,q,r,t
-"set foldmethod=syntax
+
+set foldmethod=marker
 
 set nrformats-=octal
 set clipboard=unnamed
