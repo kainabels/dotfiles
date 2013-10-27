@@ -82,6 +82,8 @@ NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 't9md/vim-textmanip'
 " コメントアウト
 NeoBundle 'The-NERD-Commenter'
+" 整列
+NeoBundle 'h1mesuke/vim-alignta'
 
 " }}}
 "
@@ -107,11 +109,16 @@ NeoBundle 'sudo.vim'
 "NeoBundle 'ctrlp.vim'
 " QuickFix で置換 
 NeoBundle 'thinca/vim-qfreplace'
+" ローカルの設定読み込み
+NeoBundle 'thinca/vim-localrc'
+
 " next zencoding
 NeoBundle 'mattn/emmet-vim'
 
 " rails
 NeoBundle 'tpope/vim-rails'
+" markdown
+NeoBundle 'plasticboy/vim-markdown'
 
 " リファレンス
 NeoBundle 'thinca/vim-ref'
