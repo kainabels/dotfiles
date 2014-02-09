@@ -270,6 +270,7 @@ set pastetoggle=<F10>
 
 " Search settings {{{ 
 set incsearch
+set nohlsearch
 set smartcase
 set wrapscan
 set ignorecase
