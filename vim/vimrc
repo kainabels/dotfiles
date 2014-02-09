@@ -597,7 +597,8 @@ source $VIMRUNTIME/macros/matchit.vim
 let g:syntastic_mode_map = { 'mode': 'passive',
             \ 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_quiet_warnings = 0
+"let g:syntastic_quiet_warnings = 0
+let g:syntastic_quiet_messages = {'level': 'warnings'}
 " }}}
 
 " switch.vim {{{
