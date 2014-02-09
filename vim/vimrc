@@ -311,6 +311,7 @@ set ai
 set si
 set ci
 "set noexpandtab
+set expandtab
 set ts=2
 set sw=2
 set softtabstop=0
