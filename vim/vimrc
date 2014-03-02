@@ -347,8 +347,11 @@ if s:meet_neocomplete_requirements()
 	let g:neocomplete#enable_smart_case = 1
 	" キャッシュの最小文字数
 	let g:neocomplete#sources#syntax#min_keyword_length = 3
+	let g:neocomplete#min_keyword_length = 2
 	" 自動的に補完しないバッファ名の設定
 	let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+	let g:neocomplete#lock_iminsert = 1
 
 	" Define dictionary.
 	let g:neocomplete#sources#dictionary#dictionaries = {
