@@ -319,7 +319,7 @@ set sw=2
 set softtabstop=0
 
 au FileType python setlocal sw=4 ts=4 softtabstop=0 expandtab indentkeys+=0# nosmartindent
-au FileType ruby setlocal sw=2 ts=2 softtabstop=0 indentkeys+=0#
+au FileType ruby setlocal sw=2 ts=2 softtabstop=0 expandtab indentkeys+=0# noci
 " }}}
 
 " vimdiff settings {{{
