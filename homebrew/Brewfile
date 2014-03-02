@@ -1,0 +1,77 @@
+update
+#upgrade
+
+# Add repository
+tap phinze/homebrew-cask || true
+tap homebrew/binary || true
+tap homebrew/dupes || true
+
+install autoconf
+install automake
+install libtool
+
+install convmv
+install nkf
+install p7zip
+install w3m
+install tree
+install wget
+install curl
+install ssh-copy-id
+
+# VCS(git)
+install git
+install git-flow
+install git-now
+install tig
+
+# VCS(Subversion)
+install subversion
+
+# zsh
+install zsh
+install zsh-completions
+
+# ag
+install the_silver_searcher
+
+# tmux
+install tmux
+install reattach-to-user-namespace
+
+# Ricty Font
+install ricty
+
+# for Ruby
+install rbenv
+install ruby-build
+
+install apple-gcc42
+install readline
+link readline
+install openssl
+install iconv
+link iconv
+#install ngnix
+#install passenger
+
+# for Rails
+install graphicsmagick
+install imagemagick
+
+install postgresql
+install sqlite
+install graphviz
+
+
+# for GUI Applications
+install brew-cask
+# Packet Analyzer
+cask install wireshark
+
+# Launcher
+cask install alfred
+cask alfred link
+
+cleanup
+
