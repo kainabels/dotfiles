@@ -322,6 +322,22 @@ au FileType python setlocal sw=4 ts=4 softtabstop=0 expandtab indentkeys+=0# nos
 au FileType ruby setlocal sw=2 ts=2 softtabstop=0 indentkeys+=0#
 " }}}
 
+" vimdiff settings {{{
+hi DiffAdd    ctermfg=black ctermbg=2
+hi DiffChange ctermfg=black ctermbg=3
+hi DiffDelete ctermfg=black ctermbg=6
+hi DiffText   ctermfg=black ctermbg=7
+
+" for git mergetool
+if &diff
+  map <Leader>1 :diffget LOCAL<CR>
+  map <Leader>2 :diffget BASE<CR>
+  map <Leader>3 :diffget REMOTE<CR>
+  map <Leader>u :<C-u>diffupdate<CR>
+  map u u:<C-u>diffupdate<CR>
+endif
+"}}}
+
 " neocomplcache settings {{{
 if s:meet_neocomplete_requirements()
   " 新しく追加した neocomplete の設定
