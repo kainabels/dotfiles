@@ -8,7 +8,7 @@ namespace :update do
 	desc "update submodule."
 	task :submodule => ["update:base"] do
 		sh "git submodule foreach 'git pull origin master'"
-		sh "git submodule update"
+    #sh "git submodule update"
 	end
 
 	desc "update dotfiles."
