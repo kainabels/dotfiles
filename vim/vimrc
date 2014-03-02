@@ -225,7 +225,7 @@ NeoBundleCheck
 
 filetype plugin indent on
 
-" 表示設定 {{{
+" display settings {{{
 " 行番号表示
 set number
 set title
