@@ -1,8 +1,16 @@
 unbind C-b
 set-option -g prefix C-t
-set-option -g default-terminal "screen-256color"
 set-window-option -g mode-keys vi
+# シェル設定
+#256色対応
+#set-option -g default-terminal "screen-256color"
+set -g default-terminal "xterm-256color"
+set -g terminal-overrides "term:colors=256"
+set -g display-time 2000
 set-option -g default-shell /usr/local/bin/zsh  
+
+# Clipboard
+set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 bind C-y run "tmux save-buffer - | reattach-to-user-namespace pbcopy"
 bind C-p run "reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"
