@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+require 'thor'
+require 'pathname'
+
+class PostgreUtil < Thor
+  class << self
+    def exit_on_failure?
+      true
+    end
+  end
+
+  long_desc <<-LONGDESC
+  PostgreSQL operation utility.
+
+  LONGDESC
+
+
+  desc 'start', 'start postgresql server.'
+  def start
+    check
+		`pg_ctl -w -D #{@pg_data_path} -l #{@pg_server_log} start`
+    $?.exitstatus
+  end
+
+  desc 'stop', 'stop postgresql server.'
+  def stop
+    check
+		`pg_ctl -D #{@pg_data_path} stop -s -m fast`
+  end
+
+	desc 'restart', 'Restart postgresql server.'
+  def restart
+    check
+		`pg_ctl -D #{@pg_data_path} restart -s -m fast`
+	end
+
+	desc 'reload', 'Reload postgresql server settings.'
+  def reload
+    check
+		`pg_ctl -D #{@pg_data_path} reload -s`
+	end
+
+	desc 'status', "Check postgresql server status."
+	def status
+    check
+		`pg_ctl -D #{@pg_data_path} status`
+    raise 'PostgreSQL is not started.' if $?.exitstatus != 0
+	end
+
+  private
+    def check
+      `which pg_ctl`
+      raise "Not set PGDATA." unless ENV["PGDATA"]
+      @pg_data_path = ENV["PGDATA"]
+      @pg_server_log = Pathname.new(@pg_data_path).join('server.log').to_s
+    end
+end
+
+PostgreUtil.start(ARGV)
+
+
