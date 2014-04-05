@@ -5,6 +5,8 @@ update
 tap phinze/homebrew-cask || true
 tap homebrew/binary || true
 tap homebrew/dupes || true
+tap homebrew/versions || true
+tap sanemat/font || true
 
 install autoconf
 install automake
@@ -18,12 +20,15 @@ install tree
 install wget
 install curl
 install ssh-copy-id
+install cmigemo
 
 # VCS(git)
 install git
 install git-flow
 install git-now
 install tig
+# gitignore 
+install gibo
 
 # VCS(Subversion)
 install subversion
@@ -54,6 +59,7 @@ install iconv
 link iconv
 #install ngnix
 #install passenger
+
 
 # for Rails
 install graphicsmagick
