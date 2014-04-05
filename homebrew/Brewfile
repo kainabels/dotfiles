@@ -63,6 +63,9 @@ install postgresql
 install sqlite
 install graphviz
 
+# for Python
+install pyenv
+install pyenv-virtualenv
 
 # for GUI Applications
 install brew-cask
