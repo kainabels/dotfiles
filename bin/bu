@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+
+require 'thor'
+
+# 簡易バックアップ
+class SimpleBackup < Thor
+  long_desc <<-LONGDESC
+  Simply and temporary backup tool.
+
+  LONGDESC
+
+  desc 'backup FILE', 'back up FILE to FILE.org'
+  option :to, aliases: [:t], desc: 'backup to specified directory.'
+  option :overwrite, aliases: [:o], type: :boolean, default: false, desc: 'overwrite file if FILE.org is exist.'
+  option :remove, aliases: [:r], type: :boolean, default: false, desc: 'remove original FILE.'
+  def backup(file)
+    # オプション解析
+    to = options[:to] 
+    to ||= File.dirname(file)
+    overwrite = options[:overwrite]
+    remove = options[:remove]
+
+    to_file = File.join(to, File.basename(file)) + '.org'
+    if File.exist? to_file
+      raise "ERROR: FILE is exist. : #{to_file}" unless overwrite
+    end
+    # ファイルコピー
+    FileUtils.cp(file, to_file)
+    FileUtils.remove_file(file) if remove
+  end
+
+  desc 'restore FILE', 'restore FILE(.org removed) to FILE'
+  option :to, aliases: [:t], desc: 'restore to specified directory.'
+  option :overwrite, aliases: [:o], type: :boolean, default: false, desc: 'overwrite FILE(.org removed) if FILE(.org removed) is exist.'
+  option :remove, aliases: [:r], type: :boolean, default: false, desc: 'remove backup FILE.'
+  def restore(file)
+    # オプション解析
+    to = options[:to] 
+    to ||= File.dirname(file)
+    overwrite = options[:overwrite]
+    remove = options[:remove]
+
+    to_file = File.join(to, File.basename(file, '.*'))
+    if File.exist? to_file
+      raise "ERROR: FILE is exist. : #{to_file}" unless overwrite
+    end
+    # ファイルコピー
+    FileUtils.cp(file, to_file)
+    FileUtils.remove_file(file) if remove
+  end
+end
+
+SimpleBackup.start(ARGV)
+
