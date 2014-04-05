@@ -66,8 +66,53 @@ install graphviz
 
 # for GUI Applications
 install brew-cask
+
+# AppCleaner
+cask install appcleaner
+
+# yet another terminal
+cask install iterm2
+
+# Touch-Pad extension
+cask install bettertouchtool
+
+# Finder extension
+cask install xtrafinder
+
+# key remap
+cask install keyremap4macbook
+
+# reverse mouse scroll
+cask install scroll-reverser
+
+# for X Application
+cask install xquartz
+
+# GUI for git
+cask install sourcetree
+
+# Web Browser
+cask install google-chrome
+
+# markdown editor
+cask install mou
+
+# vagrant
+cask install vagrant
+cask install virtualbox
+
 # Packet Analyzer
 cask install wireshark
+# blue light cut
+cask install flux
+# eclipse
+cask install java
+# eclipse
+cask install eclipse-ide
+# encryption
+cask install truecrypt
+# dropbox
+cask install dropbox
 
 # Launcher
 cask install alfred
