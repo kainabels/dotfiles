@@ -10,3 +10,6 @@ gem 'rubocop'
 # pow
 gem 'powder'
 
+
+gem 'thor'
+
