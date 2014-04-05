@@ -85,7 +85,8 @@ NeoBundle 't9md/vim-textmanip'
 NeoBundle 'The-NERD-Commenter'
 " 整列
 NeoBundle 'h1mesuke/vim-alignta'
-
+" 繰り返し簡単
+NeoBundle 'kana/vim-submode'
 " }}}
 "
 " git 操作
