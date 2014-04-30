@@ -57,6 +57,8 @@ NeoBundle 'pasela/unite-webcolorname'
 NeoBundle 'tsukkee/unite-help'
 " unite source: outline
 NeoBundle 'h1mesuke/unite-outline'
+" unite source: mru
+NeoBundle 'Shougo/neomru.vim'
 " }}}
 
 " neosnippet {{{
