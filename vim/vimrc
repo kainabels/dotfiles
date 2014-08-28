@@ -254,8 +254,9 @@ set title
 set ruler
 set showcmd
 set wildmenu
-set wildmode=list:full
+set wildmode=list:longest,full
 set wildchar=<tab>
+set history=1000
 set matchtime=2
 set cursorline
 syntax on
