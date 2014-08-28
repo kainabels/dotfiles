@@ -107,8 +107,8 @@ cask install google-chrome
 cask install mou
 
 # vagrant
-cask install vagrant
 cask install virtualbox
+cask install vagrant
 
 # Packet Analyzer
 cask install wireshark
@@ -118,10 +118,14 @@ cask install flux
 cask install java
 # eclipse
 cask install eclipse-ide
-# encryption
-cask install truecrypt
 # dropbox
 cask install dropbox
+# omnifocus
+cask install omnifocus
+# cheatsheet
+cask install cheatsheet
+# toolbar calendar
+cask install fantastical
 
 # Launcher
 cask install alfred
