@@ -102,7 +102,7 @@ NeoBundle 'Shougo/vimshell'
 " ファイラ
 NeoBundle 'Shougo/vimfiler'
 " ツリー表示
-NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'scrooloose/nerdtree'
 " DB
 NeoBundle 'vim-scripts/dbext.vim'
 " AGで検索
@@ -111,6 +111,10 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'thinca/vim-quickrun'
 " コードチェック
 NeoBundle 'scrooloose/syntastic'
+
+"NeoBundle 'chrisbra/csv.vim'
+
+NeoBundle 'rizzatti/dash.vim'
 
 " カラフルなステータスバー {{{
 NeoBundle 'itchyny/lightline.vim'
@@ -148,6 +152,8 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'tpope/vim-rails'
 " markdown
 NeoBundle 'plasticboy/vim-markdown'
+" outline
+NeoBundle 'vim-voom/VOoM'
 
 " リファレンス
 NeoBundle 'thinca/vim-ref'
