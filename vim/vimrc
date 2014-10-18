@@ -6,7 +6,7 @@ if has('vim_starting')
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -238,14 +238,16 @@ NeoBundle 'tyru/operator-camelize.vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 
-colorscheme hybrid
 " }}}
+
+call neobundle#end()
+filetype plugin indent on
 
 " Installation check.
 NeoBundleCheck
 " }}}
 
-filetype plugin indent on
+colorscheme hybrid
 
 " display settings {{{
 " 行番号表示
@@ -305,6 +307,8 @@ set backspace=indent,eol,start
 set fileformats=unix,dos,mac
 " ビープは鳴らさない
 set vb t_vb=
+" undo
+set undodir=~/.vimundo
 " バックアップは作らない
 set nobackup
 " 
@@ -335,14 +339,16 @@ set termencoding=utf8
 set ai
 set si
 set ci
-"set noexpandtab
-set expandtab
 set ts=2
 set sw=2
 set softtabstop=0
+"set noexpandtab
+"set expandtab
 
 au FileType python setlocal sw=4 ts=4 softtabstop=0 expandtab indentkeys+=0# nosmartindent
 au FileType ruby setlocal sw=2 ts=2 softtabstop=0 expandtab indentkeys+=0# noci
+au FileType eruby setlocal sw=2 ts=2 softtabstop=0 expandtab indentkeys+=0# noci
+au FileType scss setlocal sw=2 ts=2 softtabstop=0 expandtab indentkeys+=0# noci
 " }}}
 
 " vimdiff settings {{{
@@ -601,7 +607,8 @@ nnoremap [unite]rj :<C-u>Unite rails/javascript<CR>
 nnoremap [unite]rr :<C-u>Unite rails/route<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+"nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 "nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]m :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
@@ -641,6 +648,28 @@ nnoremap <silent> <Leader>fe :<C-u>VimFilerBufferDir -quit<CR>
 ""現在開いているバッファをIDE風に開く
 nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
 " }}}
+
+" vim-submode settings {{{
+call submode#enter_with('winsize', 'n', '', '<C-w>>', '<C-w>>')
+call submode#enter_with('winsize', 'n', '', '<C-w><', '<C-w><')
+call submode#enter_with('winsize', 'n', '', '<C-w>+', '<C-w>-')
+call submode#enter_with('winsize', 'n', '', '<C-w>-', '<C-w>+')
+call submode#map('winsize', 'n', '', '>', '<C-w>>')
+call submode#map('winsize', 'n', '', '<', '<C-w><')
+call submode#map('winsize', 'n', '', '+', '<C-w>-')
+call submode#map('winsize', 'n', '', '-', '<C-w>+')
+
+call submode#enter_with('changetab', 'n', '', 'gt', 'gt')
+call submode#enter_with('changetab', 'n', '', 'gT', 'gT')
+call submode#map('changetab', 'n', '', 't', 'gt')
+call submode#map('changetab', 'n', '', 'T', 'gT')
+
+call submode#enter_with('undo/redo', 'n', '', 'g-', 'g-')
+call submode#enter_with('undo/redo', 'n', '', 'g+', 'g+')
+call submode#map('undo/redo', 'n', '', '-', 'g-')
+call submode#map('undo/redo', 'n', '', '+', 'g+')
+" }}}
+
 
 " NERDCommenter settings {{{
 " コメントした後に挿入するスペースの数
