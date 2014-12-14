@@ -10,6 +10,14 @@ gem 'rubocop'
 # pow
 gem 'powder'
 
+gem 'ltsview'
 
 gem 'thor'
 
+gem 'berkshelf'
+
+gem 'chef'
+
+gem 'knife-solo'
+
+gem 'gemignore'

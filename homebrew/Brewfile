@@ -50,6 +50,9 @@ install ricty
 # for Ruby
 install rbenv
 install ruby-build
+install rbenv-binstubs
+install rbenv-default-gems
+install rbenv-gem-rehash
 
 install apple-gcc42
 install readline
@@ -66,6 +69,7 @@ install graphicsmagick
 install imagemagick
 
 install postgresql
+install mariadb
 install sqlite
 install graphviz
 
@@ -126,6 +130,14 @@ cask install omnifocus
 cask install cheatsheet
 # toolbar calendar
 cask install fantastical
+
+# QuickLook Plugin
+cask install quicklook-json
+cask install qlmarkdown
+cask install qlstephen
+cask install quicklook-csv
+cask install betterzipql
+cask install qlcolorcode
 
 # Launcher
 cask install alfred
