@@ -1,147 +1,147 @@
-update
+brew update
 #upgrade
 
 # Add repository
-tap phinze/homebrew-cask || true
-tap homebrew/binary || true
-tap homebrew/dupes || true
-tap homebrew/versions || true
-tap sanemat/font || true
+brew tap phinze/homebrew-cask || true
+brew tap homebrew/binary || true
+brew tap homebrew/dupes || true
+brew tap homebrew/versions || true
+brew tap sanemat/font || true
 
-install autoconf
-install automake
-install libtool
+brew install autoconf
+brew install automake
+brew install libtool
 
-install convmv
-install nkf
-install p7zip
-install w3m
-install tree
-install wget
-install curl
-install ssh-copy-id
-install cmigemo
+brew install convmv
+brew install nkf
+brew install p7zip
+brew install w3m
+brew install tree
+brew install wget
+brew install curl
+brew install ssh-copy-id
+brew install cmigemo
 
 # VCS(git)
-install git
-install git-flow
-install git-now
-install tig
+brew install git
+brew install git-flow
+brew install git-now
+brew install tig
 # gitignore 
-install gibo
+brew install gibo
 
 # VCS(Subversion)
-install subversion
+brew install subversion
 
 # zsh
-install zsh
-install zsh-completions
+brew install zsh
+brew install zsh-completions
 
 # ag
-install the_silver_searcher
+brew install the_silver_searcher
 
 # tmux
-install tmux
-install reattach-to-user-namespace
+brew install tmux
+brew install reattach-to-user-namespace
 
 # Ricty Font
-install ricty
+brew install ricty
 
 # for Ruby
-install rbenv
-install ruby-build
-install rbenv-binstubs
-install rbenv-default-gems
-install rbenv-gem-rehash
+brew install rbenv
+brew install ruby-build
+brew install rbenv-binstubs
+brew install rbenv-default-gems
+brew install rbenv-gem-rehash
 
-install apple-gcc42
-install readline
-link readline
-install openssl
-install iconv
-link iconv
+brew install apple-gcc42
+brew install readline
+brew link readline
+brew install openssl
+brew install iconv
+brew link iconv
 #install ngnix
 #install passenger
 
 
 # for Rails
-install graphicsmagick
-install imagemagick
+brew install graphicsmagick
+brew install imagemagick
 
-install postgresql
-install mariadb
-install sqlite
-install graphviz
+brew install postgresql
+brew install mariadb
+brew install sqlite
+brew install graphviz
 
 # for Python
-install pyenv
-install pyenv-virtualenv
+brew install pyenv
+brew install pyenv-virtualenv
 
 # for GUI Applications
-install brew-cask
+brew install brew-cask
 
 # AppCleaner
-cask install appcleaner
+brew cask install appcleaner
 
 # yet another terminal
-cask install iterm2
+brew cask install iterm2
 
 # Touch-Pad extension
-cask install bettertouchtool
+brew cask install bettertouchtool
 
 # Finder extension
-cask install xtrafinder
+brew cask install xtrafinder
 
 # key remap
-cask install keyremap4macbook
+brew cask install keyremap4macbook
 
 # reverse mouse scroll
-cask install scroll-reverser
+brew cask install scroll-reverser
 
 # for X Application
-cask install xquartz
+brew cask install xquartz
 
 # GUI for git
-cask install sourcetree
+brew cask install sourcetree
 
 # Web Browser
-cask install google-chrome
+brew cask install google-chrome
 
 # markdown editor
-cask install mou
+brew cask install mou
 
 # vagrant
-cask install virtualbox
-cask install vagrant
+brew cask install virtualbox
+brew cask install vagrant
 
 # Packet Analyzer
-cask install wireshark
+brew cask install wireshark
 # blue light cut
-cask install flux
+brew cask install flux
 # eclipse
-cask install java
+brew cask install java
 # eclipse
-cask install eclipse-ide
+brew cask install eclipse-ide
 # dropbox
-cask install dropbox
+brew cask install dropbox
 # omnifocus
-cask install omnifocus
+brew cask install omnifocus
 # cheatsheet
-cask install cheatsheet
+brew cask install cheatsheet
 # toolbar calendar
-cask install fantastical
+brew cask install fantastical
 
 # QuickLook Plugin
-cask install quicklook-json
-cask install qlmarkdown
-cask install qlstephen
-cask install quicklook-csv
-cask install betterzipql
-cask install qlcolorcode
+brew cask install quicklook-json
+brew cask install qlmarkdown
+brew cask install qlstephen
+brew cask install quicklook-csv
+brew cask install betterzipql
+brew cask install qlcolorcode
 
 # Launcher
-cask install alfred
-cask alfred link
+brew cask install alfred
+brew cask alfred link
 
-cleanup
+brew cleanup
 
