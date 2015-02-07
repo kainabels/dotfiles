@@ -14,10 +14,14 @@ gem 'ltsview'
 
 gem 'thor'
 
-gem 'berkshelf'
+#gem 'berkshelf'
 
-gem 'chef'
+#gem 'chef'
 
-gem 'knife-solo'
+#gem 'knife-solo'
 
 gem 'gemignore'
+
+gem 'rails'
+
+gem 'fluentd'
