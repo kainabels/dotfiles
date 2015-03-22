@@ -1,16 +1,25 @@
-brew update
-#upgrade
+#! /bin/sh
 
-# Add repository
-brew tap phinze/homebrew-cask || true
+brew update
+
+# for binary only
 brew tap homebrew/binary || true
+# for OSX default
 brew tap homebrew/dupes || true
+# for multiple versions
 brew tap homebrew/versions || true
+# for Ricty Font
 brew tap sanemat/font || true
+# for Peco
+brew tap peco/peco || true
+
+# for GUI Applications
+brew install caskroom/cask/brew-cask
 
 brew install autoconf
 brew install automake
 brew install libtool
+brew install pkg-config
 
 brew install convmv
 brew install nkf
@@ -36,6 +45,10 @@ brew install subversion
 # zsh
 brew install zsh
 brew install zsh-completions
+brew install autojump
+# tap:peco/peco
+brew install peco
+brew install migemogrep
 
 # ag
 brew install the_silver_searcher
@@ -44,7 +57,9 @@ brew install the_silver_searcher
 brew install tmux
 brew install reattach-to-user-namespace
 
-# Ricty Font
+# for X Application
+brew cask install xquartz
+# Ricty Font(tap: sanemat/font)
 brew install ricty
 
 # for Ruby
@@ -54,12 +69,12 @@ brew install rbenv-binstubs
 brew install rbenv-default-gems
 brew install rbenv-gem-rehash
 
-brew install apple-gcc42
+#brew install apple-gcc42
 brew install readline
-brew link readline
+#brew link readline
 brew install openssl
 brew install iconv
-brew link iconv
+#brew link iconv
 #install ngnix
 #install passenger
 
@@ -68,17 +83,22 @@ brew link iconv
 brew install graphicsmagick
 brew install imagemagick
 
+# Databases
 brew install postgresql
 brew install mariadb
 brew install sqlite
+
 brew install graphviz
 
 # for Python
 brew install pyenv
 brew install pyenv-virtualenv
 
-# for GUI Applications
-brew install brew-cask
+# for Node
+brew install nodebrew
+
+# ------------------------------------------------------------ 
+# GUI Applications
 
 # AppCleaner
 brew cask install appcleaner
@@ -93,13 +113,10 @@ brew cask install bettertouchtool
 brew cask install xtrafinder
 
 # key remap
-brew cask install keyremap4macbook
+brew cask install karabiner
 
 # reverse mouse scroll
 brew cask install scroll-reverser
-
-# for X Application
-brew cask install xquartz
 
 # GUI for git
 brew cask install sourcetree
