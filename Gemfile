@@ -2,7 +2,7 @@
 source "https://rubygems.org"
 
 # ruby reference
-gem 'refe2' 
+gem 'refe2'
 
 # ruby code checker
 gem 'rubocop'
@@ -14,14 +14,11 @@ gem 'ltsview'
 
 gem 'thor'
 
-#gem 'berkshelf'
-
-#gem 'chef'
-
-#gem 'knife-solo'
+# gem 'berkshelf'
+# gem 'chef'
+# gem 'knife-solo'
 
 gem 'gemignore'
-
 gem 'rails'
-
 gem 'fluentd'
+gem 'itamae'
