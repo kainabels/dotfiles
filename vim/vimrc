@@ -156,6 +156,8 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'tpope/vim-rails'
 " markdown
 NeoBundle 'plasticboy/vim-markdown'
+" プレビュー
+NeoBundle 'kannokanno/previm'
 " outline
 NeoBundle 'vim-voom/VOoM'
 
