@@ -279,6 +279,8 @@ let mapleader = ","
 noremap \ ,
 " C-@: 挿入モードから抜ける
 imap <C-@> <C-[>
+" C-j: 挿入モードから抜ける
+imap <C-j> <C-[>
 " ZQ: 保存せず終了は安全のため、外す
 nnoremap ZQ <Nop>
 " カーソル移動は見た目行で
@@ -611,8 +613,8 @@ nnoremap [unite]rj :<C-u>Unite rails/javascript<CR>
 nnoremap [unite]rr :<C-u>Unite rails/route<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
 nnoremap <silent> [unite]b :<C-u>Unite buffer<CR>
-"nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
-nnoremap <silent> [unite]f :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]f :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+nnoremap <silent> [unite]F :<C-u>UniteWithCurrentDir -buffer-name=files buffer file_mru bookmark file<CR>
 "nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]m :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
@@ -768,21 +770,21 @@ noremap [op] <Nop>
 map s [op]
 
 " operator:surround {{{
-map <silent>[op]sa <Plug>(operator-surround-append)
-map <silent>[op]sd <Plug>(operator-surround-delete)
-map <silent>[op]sr <Plug>(operator-surround-replace)
+map <silent>[op]a <Plug>(operator-surround-append)
+map <silent>[op]d <Plug>(operator-surround-delete)
+map <silent>[op]r <Plug>(operator-surround-replace)
 " delete or replace most inner surround
 " if you use vim-textobj-multiblock
-nmap <silent>[op]sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
-nmap <silent>[op]srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
+nmap <silent>[op]dd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
+nmap <silent>[op]rr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
 
 " if you use vim-textobj-between
-nmap <silent>[op]sdb <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
-nmap <silent>[op]srb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
+nmap <silent>[op]db <Plug>(operator-surround-delete)<Plug>(textobj-between-a)
+nmap <silent>[op]rb <Plug>(operator-surround-replace)<Plug>(textobj-between-a)
 " }}}
 
 " operator: replace
-map <silent>[op]r  <Plug>(operator-replace)
+map <silent>[op]R  <Plug>(operator-replace)
 
 " operator: ag
 map <silent>[op]g <Plug>(operator-ag)
