@@ -15,3 +15,4 @@ fi
 
 setopt hist_ignore_all_dups
 
+export PATH=$HOME/.nodebrew/current/bin:$PATH
