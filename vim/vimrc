@@ -307,7 +307,6 @@ set incsearch
 set nohlsearch
 set smartcase
 set wrapscan
-set ignorecase
 " }}}
 
 " * edit setting
@@ -344,9 +343,9 @@ set termencoding=utf8
 "
 
 " Indent setting {{{
-set ai
+"set ai
 set si
-set ci
+"set ci
 set ts=2
 set sw=2
 set softtabstop=0
@@ -693,7 +692,7 @@ source $VIMRUNTIME/macros/matchit.vim
 
 " syntastic settings {{{
 let g:syntastic_mode_map = { 'mode': 'passive',
-            \ 'active_filetypes': ['ruby'] }
+            \ 'active_filetypes': ['ruby', 'javascript'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 "let g:syntastic_quiet_warnings = 0
 "let g:syntastic_quiet_messages = {'level': 'warnings'}
@@ -702,7 +701,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_checkers = ['eslint']
 " }}}
 
 " switch.vim {{{
