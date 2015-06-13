@@ -28,6 +28,18 @@ if exists peco; then
 		zle -R -c               # refresh
 	}
 
-    zle -N peco_select_history
-    bindkey '^R' peco_select_history
+	zle -N peco_select_history
+	bindkey '^R' peco_select_history
+
+	function peco-src () {
+		local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+		if [ -n "$selected_dir" ]; then
+			BUFFER="cd ${selected_dir}"
+			zle accept-line
+		fi
+		zle clear-screen
+	}
+	zle -N peco-src
+	bindkey '^]' peco-src
 fi
+
