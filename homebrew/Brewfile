@@ -74,10 +74,13 @@ brew install readline
 #brew link readline
 brew install openssl
 brew install iconv
-#brew link iconv
+brew link iconv --force
+brew install libxml2
+brew link libxml2 --force
+brew install libxslt
+brew link libxslt --force
 #install ngnix
 #install passenger
-
 
 # for Rails
 brew install graphicsmagick
