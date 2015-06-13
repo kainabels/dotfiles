@@ -7,14 +7,6 @@ BASE_DIR=$(cd $(dirname $0) && pwd)
 git submodule init 
 git submodule update
 
-# settings.
-install_bash_settings
-install_zsh_settings
-install_vim_settings
-install_tmux_settings
-
-exit 0
-
 # install bash settings.
 function install_bash_settings() {
 	BASH_BASE=$BASE_DIR/bash
@@ -59,7 +51,7 @@ function install_vim_settings() {
 	if [ -d ~/.vim ]; then
 		mv ~/.vim ~/.vim.org
 	fi
-	ln -s $VIM_BASE/vim ~/.vim
+	ln -s $VIM_BASE/vimfiles ~/.vim
 }
 
 # install tmux settings.
@@ -74,4 +66,13 @@ function install_tmux_settings() {
 		ln -s $TMUX_BASE/.tmux.conf ~/.tmux.conf
 	fi
 }
+
+# settings.
+install_bash_settings
+install_zsh_settings
+install_vim_settings
+install_tmux_settings
+
+exit 0
+
 
