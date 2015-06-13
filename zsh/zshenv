@@ -1,10 +1,14 @@
+# PostgreSQL settings.
+PGDATA=/usr/local/var/postgres
+export PGDATA
+GOPATH=~/ghq
+export GOPATH 
+
 # PATH settings.
 typeset -U path
 PATH=/usr/local/bin:$PATH
 PATH=/Applications/MacVim.app/Contents/MacOS:$PATH
 PATH=~/dotfiles/bin:$PATH
+PATH=$PATH:/usr/local/opt/go/libexec/bin
+PATH=$PATH:$GOPATH/bin
 export PATH
-# PostgreSQL settings.
-PGDATA=/usr/local/var/postgres
-export PGDATA
-
