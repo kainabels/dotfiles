@@ -1,0 +1,176 @@
+AllCops:
+  # Railsオプション有効(-R)
+  RunRailsCops: true
+  DisplayCopNames: true
+  Exclude:
+    - 'bin/*'
+    - 'bundle_bin/*'
+    - 'node_modules/**/*'
+    - 'db/migrate/*'
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+    - 'lib/tasks/auto_annotate_models.rake'
+    - 'config/initializers/devise.rb'
+    - 'config/initializers/simple_form.rb'
+    - 'config/initializers/simple_form_bootstrap.rb'
+    - 'config/initializers/kaminari_config.rb'
+  #DisplayCopNames: true
+# Offense count: 1
+# Configuration parameters: AllowSafeAssignment.
+#Lint/AssignmentInCondition:
+#  Enabled: false
+
+# Offense count: 3
+#Lint/HandleExceptions:
+#  Enabled: false
+
+# Offense count: 5
+# Cop supports --auto-correct.
+#Lint/UnusedBlockArgument:
+#  Enabled: false
+
+# Offense count: 1
+Metrics/AbcSize:
+  Max: 20
+
+# Offense count: 87
+# Configuration parameters: AllowURI, URISchemes.
+Metrics/LineLength:
+  Max: 120
+
+# Offense count: 1
+# Configuration parameters: CountComments.
+Metrics/MethodLength:
+  Max: 15
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedHashRocketStyle, EnforcedColonStyle, EnforcedLastArgumentHashStyle, SupportedLastArgumentHashStyles.
+#Style/AlignHash:
+#  Enabled: false
+
+# Offense count: 39
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+#Style/AlignParameters:
+#  EnforcedStyle: with_fixed_indentation
+#  Enabled: false
+
+# Offense count: 3
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+#Style/AndOr:
+#  Enabled: false
+
+# Offense count: 1
+# Cop supports --auto-correct.
+Style/BlockComments:
+  Enabled: false
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+#Style/BracesAroundHashParameters:
+#  Enabled: false
+
+# Offense count: 4
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+# Offense count: 2
+# Cop supports --auto-correct.
+#Style/CommentIndentation:
+#  Enabled: false
+
+# Offense count: 9
+#Style/Documentation:
+#  Enabled: false
+
+# Offense count: 4
+# Cop supports --auto-correct.
+#Style/EmptyLines:
+#  Enabled: false
+
+# Offense count: 7
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+#Style/EmptyLinesAroundBlockBody:
+#  Enabled: false
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+#Style/EmptyLinesAroundClassBody:
+#  Enabled: false
+
+# Offense count: 2
+# Configuration parameters: Exclude.
+#Style/FileName:
+#  Enabled: false
+
+# Offense count: 5
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+#Style/HashSyntax:
+#  Enabled: false
+
+# Offense count: 2
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+#Style/IndentHash:
+#  Enabled: false
+
+# Offense count: 1
+# Cop supports --auto-correct.
+#Style/LeadingCommentSpace:
+#  Enabled: false
+
+# Offense count: 1
+# Cop supports --auto-correct.
+#Style/NumericLiterals:
+#  MinDigits: 15
+
+Style/Lambda:
+  Enabled: false
+
+# Offense count: 8
+# Cop supports --auto-correct.
+# Configuration parameters: PreferredDelimiters.
+#Style/PercentLiteralDelimiters:
+#  Enabled: false
+
+# Offense count: 17
+# Cop supports --auto-correct.
+#Style/SingleSpaceBeforeFirstArg:
+#  Enabled: false
+
+# Offense count: 4
+# Cop supports --auto-correct.
+#Style/SpaceInsideBrackets:
+#  Enabled: false
+
+# Offense count: 124
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+Style/StringLiterals:
+  Enabled: false
+
+# Offense count: 1
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+#Style/TrailingBlankLines:
+#  Enabled: false
+
+# Offense count: 2
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyleForMultiline, SupportedStyles.
+#Style/TrailingComma:
+#  Enabled: false
+
+# Offense count: 3
+# Cop supports --auto-correct.
+#Style/TrailingWhitespace:
+#  Enabled: false
