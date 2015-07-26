@@ -1,0 +1,25 @@
+[include]
+	path = ~/.gitconfig.user
+[color]
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	dc = diff --cached
+	d = diff
+[core]
+	editor = vim
+	excludesfile = /Users/kain/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[ghq]
+	root = ~/ghq
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
