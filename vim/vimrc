@@ -95,6 +95,9 @@ NeoBundle 'kana/vim-submode'
 " git 操作 {{{
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'cohama/agit.vim'
+NeoBundle 'rhysd/committia.vim'
+NeoBundle 'idanarye/vim-merginal'
 " }}}
 
 " shell
