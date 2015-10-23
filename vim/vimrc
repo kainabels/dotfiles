@@ -244,10 +244,15 @@ NeoBundle 'tyru/operator-camelize.vim'
 " }}}
 
 " color-theme {{{
+set background=dark
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 
 " }}}
+
+if has('mac')
+	NeoBundle 'rizzatti/dash.vim'
+endif
 
 call neobundle#end()
 filetype plugin indent on
