@@ -146,6 +146,8 @@ NeoBundle 'groenewege/vim-less'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 
+NeoBundle 'elzr/vim-json'
+
 " next zencoding
 NeoBundle 'mattn/emmet-vim'
 " WEBカラー表示
@@ -819,6 +821,9 @@ map <silent>[op]tC <Plug>(operator-tabular-md2csv)
 
 " }}}
 
+" vim-json {{{
+let g:vim_json_syntax_conceal = 0
+" }}}
 
 "-------------------------------------------------
 " ユーザー定義関数
