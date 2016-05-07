@@ -3,12 +3,14 @@
 [color]
 	ui = auto
 [alias]
+	a = add
+	b = branch
 	co = checkout
 	ci = commit
 	st = status
 	dc = diff --cached
 	d = diff
-	b = branch
+	f = fetch --prune
 [core]
 	editor = vim
 	excludesfile = /Users/kain/.gitignore_global
@@ -24,3 +26,7 @@
 	helper = osxkeychain
 [push]
 	default = simple
+[merge]
+	ff = false
+[pull]
+	rebase = preserve
