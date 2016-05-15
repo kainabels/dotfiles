@@ -2,6 +2,8 @@
 if &compatible
 	set nocompatible
 endif
+filetype off
+filetype plugin indent off
 
 let g:rc_dir = expand('~/.vim/rc') 
 
@@ -16,8 +18,19 @@ augroup MyAutoCmd
   autocmd!
 augroup END
 
+" initial settings
+if has('vim_starting')
+  call s:source_rc('init.rc.vim')
+endif
 " dein settings
 call s:source_rc('dein.rc.vim')
+if !has('vim_starting')
+  call dein#call_hook('source')
+  call dein#call_hook('post_source')
+
+  syntax enable
+  filetype plugin indent on
+endif
 " View settings
 call s:source_rc('view.rc.vim')
 " Key mappings
@@ -25,8 +38,30 @@ call s:source_rc('mappings.rc.vim')
 " Edit settings
 call s:source_rc('edit.rc.vim')
 
-"}}}
+"---------------------------------------------------------------------------
+" FileType:
+"
+autocmd MyAutoCmd FileType,Syntax,BufNewFile,BufNew,BufRead
+      \ * call s:my_on_filetype()
+function! s:my_on_filetype() abort "{{{
+  if &l:filetype == '' && bufname('%') == ''
+    return
+  endif
+
+  redir => filetype_out
+  silent! filetype
+  redir END
+  if filetype_out =~# 'OFF'
+    " Lazy loading
+    silent! filetype plugin indent on
+    syntax enable
+    filetype detect
+  endif
+endfunction "}}}
+
 " matchit
 source $VIMRUNTIME/macros/matchit.vim
 
 set helplang=ja 
+filetype plugin indent on
+filetype detect

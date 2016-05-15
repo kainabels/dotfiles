@@ -1,9 +1,5 @@
 " Key Mappings
 
-" Plugin用
-let g:mapleader = ','
-let g:maplocalleader = 'm'
-
 " ,のデフォルトの機能は、\で使えるように退避
 noremap \ ,
 
@@ -19,14 +15,10 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 " plugin用プレースホルダ
-" 文字をレジスタに入れて挿入を開始(clと同じ)を潰す
-nnoremap s <Nop>
 " operator
 noremap [op] <Nop>
 map s [op]
 
-" 入力した文字の左側までジャンプを潰す
-nnoremap t <Nop>
 " クリップボードからペースト
 vnoremap <silent> <C-p> "0p<CR>
 " paste-modeきりかえ

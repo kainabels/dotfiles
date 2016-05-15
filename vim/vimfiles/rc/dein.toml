@@ -126,7 +126,8 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]] # ステータスバー
 repo = 'itchyny/lightline.vim'
 depends = ['vim-fugitive', 'vim-gitgutter']
-hook_add = '''"{{{
+hook_add = '''
+"{{{
 let g:lightline = {
       \ 'colorscheme': 'solarized_dark',
       \ 'active': {
@@ -172,13 +173,15 @@ function! MyGitGutter()
   endfor
   return join(ret, ' ')
 endfunction
-'''
+"}}}'''
 
 [[plugins]] # ステータスバーテーマ
 repo = 'cocopon/lightline-hybrid.vim'
 depends = 'lighline.vim'
 hook_add = '''
+"{{{
 let g:lightline.colorscheme = 'hybrid'
 "}}}'''
 
-
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
