@@ -12,7 +12,7 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 " 設定開始
-"if dein#load_state(s:dein_dir)
+if dein#load_state(s:dein_dir)
 	call dein#begin(s:dein_dir)
 	" プラグインリストを収めた TOML ファイル
 	let s:toml = g:rc_dir . '/dein.toml'
@@ -24,8 +24,8 @@ endif
 
 	" 設定終了
 	call dein#end()
-"	call dein#save_state()
-"endif
+	call dein#save_state()
+endif
 
 " もし、未インストールものものがあったらインストール
 if has('vim_starting') && dein#check_install()
