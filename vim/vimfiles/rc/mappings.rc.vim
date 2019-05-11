@@ -14,6 +14,9 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+"削除でヤンクしない
+nnoremap x "_x
+
 " plugin用プレースホルダ
 " operator
 noremap [op] <Nop>
