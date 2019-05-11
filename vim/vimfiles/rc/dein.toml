@@ -1,0 +1,127 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]] # カーソル位置のコンテキストに合わせてftを切り替える
+repo = 'osyo-manga/vim-precious'
+depends = ['context_filetype.vim']
+
+[[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]] # textobj: multi-block: asb, isb
+repo = 'osyo-manga/vim-textobj-multiblock'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj:コメント: ac, ic
+repo = 'thinca/vim-textobj-comment'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: 日時: ada, ida
+repo = 'kana/vim-textobj-datetime'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj:diff: adf, idf
+repo = 'kana/vim-textobj-diff'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: バッファ全体: ae, ie
+repo = 'kana/vim-textobj-entire'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: between: af, if
+repo = 'thinca/vim-textobj-between'
+depends = 'vim-textobj-user'
+
+#[[plugins]] # textobj:function: af, if
+#repo = 'kana/vim-textobj-function'
+#[[plugins]] # textobj: function(javascript): af, if
+#repo =: 'thinca/vim-textobj-function-javascript'
+#[[plugins]] # textobj: function(ruby): af, if
+#repo = 't9md/vim-textobj-function-ruby'
+
+[[plugins]] # textobj: インデント: ai, ii, aI, iI
+repo = 'kana/vim-textobj-indent'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: 行: al, il
+repo = 'kana/vim-textobj-line'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: 日本語括弧: aj, ij
+repo = 'kana/vim-textobj-jabraces'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: motion: am, im
+repo = 'hchbaw/textobj-motionmotion.vim'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: 正規表現: aq, iq
+repo = "deris/vim-textobj-enclosedsyntax"
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj:ruby: ar, ir
+repo = 'rhysd/vim-textobj-ruby'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj:スペース: aS, iS
+repo = 'saihoooooooo/vim-textobj-space'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj:url: au, iu
+repo = 'mattn/vim-textobj-url'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj:継続行: av, iv
+repo = 'rhysd/vim-textobj-continuous-line'
+depends = 'vim-textobj-user'
+
+#[[plugins]] # textobj: snake_case 上の単語: aw, iw
+#repo = 'h1mesuke/textobj-wiw'
+[[plugins]] # textobj: x(): axb, ixb
+repo = 'anyakichi/vim-textobj-xbrackets'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj:syntax: ay, iy
+repo = 'kana/vim-textobj-syntax'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: ifdef: a#, i#
+repo = 'anyakichi/vim-textobj-ifdef'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: -区切りの文字列: a-, i-
+repo = 'RyanMcG/vim-textobj-dash'
+depends = 'vim-textobj-user'
+
+[[plugins]] # textobj: アンダースコア: a_, i_
+repo = 'kana/vim-textobj-underscore'
+depends = 'vim-textobj-user'
+
+[[plugins]] # operator
+repo = 'kana/vim-operator-user'
+
+[[plugins]] # 拡張f
+repo = 'rhysd/clever-f.vim'
+
+[[plugins]] # git操作
+repo = 'tpope/vim-fugitive'
+
+[[plugins]] # git変更表示
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
