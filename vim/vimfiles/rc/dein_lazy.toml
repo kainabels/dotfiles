@@ -266,16 +266,22 @@ on_event = ['VimEnter']
 repo = 'idanarye/vim-merginal'
 on_event = ['VimEnter']
 
-[[plugins]]
-repo = 'w0ng/vim-hybrid'
-on_event = ['VimEnter']
+#[[plugins]]
+#repo = 'w0ng/vim-hybrid'
+#on_event = ['VimEnter']
 
+#[[plugins]]
+#repo = 'chriskempson/vim-tomorrow-theme'
+#on_event = ['VimEnter']
+#hook_post_source = '''
+#set background
+#colorscheme Tomorrow-Night
+#'''
 [[plugins]]
-repo = 'chriskempson/vim-tomorrow-theme'
+repo = 'dracula/vim'
 on_event = ['VimEnter']
 hook_post_source = '''
-set background
-colorscheme Tomorrow-Night
+colorscheme dracula
 '''
 
 [[plugins]] # ステータスバー
@@ -285,7 +291,7 @@ on_event = ['VimEnter']
 hook_post_source = '''
 "{{{
 let g:lightline = {
-      \ 'colorscheme': 'solarized_dark',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [
       \     ['mode', 'paste'],
@@ -331,7 +337,10 @@ function! MyGitGutter()
 endfunction
 "}}} '''
 
-[[plugins]] # ステータスバーテーマ
-repo = 'cocopon/lightline-hybrid.vim'
-on_event = ['VimEnter']
+#[[plugins]] # ステータスバーテーマ
+#repo = 'cocopon/lightline-hybrid.vim'
+#on_event = ['VimEnter']
 
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+on_event = ['VimEnter']
